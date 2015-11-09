@@ -11,7 +11,7 @@ function mainController($scope, $http){
 	$http.get('/api/persona')
 		.success(function(data){
 			$scope.personas = data;
-		});
+		})
 		.error(function(data){
 			console.log("ERROR: " + data);
 		});
@@ -23,8 +23,8 @@ function mainController($scope, $http){
 			.success(function(data){
 				$scope.newPersona = {};	//borramos los datos del formulario..
 				$scope.personas   = data;
-			});
-			error(function(data){
+			})
+			.error(function(data){
 				console.log('ERROR: ' + data);
 			});
 	}
@@ -32,8 +32,8 @@ function mainController($scope, $http){
 	//funcion para modificar/editar los datos de una persona
 	$scope.modificarPersona = function(newPersona){
 
-		$http.put('api/persona' + $scope.newPersona._id, $scope.newPersona)
-			.sucess(function(data){
+		$http.put('api/persona/' + $scope.newPersona._id, $scope.newPersona)
+			.success(function(data){
 				$scope.newPersona = {}; //borramos los datos del formulario
 				$scope.personas   = data;
 				$scope.selected	  = false;
@@ -46,7 +46,7 @@ function mainController($scope, $http){
 	//funciion para borrar un objecto mediante su id
 	$scope.eliminarPersona = function(newPersona){
 
-		$http.delete('api/persona' + $scope.newPersona._id)
+		$http.delete('api/persona/' + $scope.newPersona._id)
 			.success(function(data){
 				$scope.newPersona = {};
 				$scope.personas	  = data;
@@ -54,7 +54,7 @@ function mainController($scope, $http){
 			})
 			.error(function(data){
 				console.log("ERROR: " + data);
-			})
+			});
 	}
 
 	$scope.selectPersona = function(persona){

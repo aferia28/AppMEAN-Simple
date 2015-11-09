@@ -20,13 +20,14 @@ exports.getPersona = function(req, res){
 	});
 }
 
-exports.setPersona = function(req, res){
+exports.setPersona = function(request, res){
 
 	Persona.create(
 		{
-			nombre : req.body.nombre, 
-			apellido : req.body.apellido, 
-			edad : req.body.edad}, 
+			nombre : request.body.nombre, 
+			apellido : request.body.apellido, 
+			edad : request.body.edad
+		}, 
 			function(err, persona){
 				if(err){
 					res.send(err);
@@ -63,11 +64,11 @@ exports.updatePersona = function(req, res){
 		});
 }
 
-exports.deletePersona = function(req, res){
+exports.deletePersona = function(request, res){
 
 	Persona.remove(
 		{
-			_id : req.params.persona_id
+			_id : request.params.persona_id
 		}, function(err, persona){
 			if(err)
 				res.send(err);
@@ -79,5 +80,5 @@ exports.deletePersona = function(req, res){
 					res.json(persona);
 				}
 			});
-		});
+		});	
 }

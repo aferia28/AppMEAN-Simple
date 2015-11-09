@@ -18,7 +18,7 @@ module.exports = function(app) {
 
 	app.put('/api/persona/:persona_id', Controller.updatePersona);
 
-	app.delete('/api/persona/:persona_id', Controller.removePersona);
+	app.delete('/api/persona/:persona_id', Controller.deletePersona);
 
 	app.get('*', function(req, res){
 		res.sendfile('./angular/index.html')

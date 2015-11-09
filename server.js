@@ -11,13 +11,13 @@ var port 		= process.env.PORT || 8080;	//utilizamos el puerto 8080
 
 //configuración
 
-mongoose.connect('mongodb://localhost:27017/MeanExample'):
+mongoose.connect('mongodb://localhost:27017/MeanExample');
 
 app.configure(function(){
 	app.use(express.static(__dirname + '/angular'));
 	app.use(express.logger('dev'));			//activamos modo dev
 	app.use(express.bodyParser());
-	app.use(express.metodOverride());
+	app.use(express.methodOverride());
 });
 
 
