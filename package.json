@@ -1,0 +1,11 @@
+{
+	"name" 			: "AppMEAN Simple",
+	"version" 		: "0.0.1",
+	"description"	: "App sencilla con MongoDB, Express, AngularJS y NodeJS",
+	"main"			: "server.js",
+	"author"		: "Adrián Feria",
+	"dependencies"	: {
+		"express"	: "*",
+		"mongoose"	: "*"
+	} 
+}
