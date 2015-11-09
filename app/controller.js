@@ -62,3 +62,22 @@ exports.updatePersona = function(req, res){
 			});
 		});
 }
+
+exports.deletePersona = function(req, res){
+
+	Persona.remove(
+		{
+			_id : req.params.persona_id
+		}, function(err, persona){
+			if(err)
+				res.send(err);
+
+			Persona.find(function(err, persona){
+				if(err){
+					res.send(err);
+				}else{
+					res.json(persona);
+				}
+			});
+		});
+}
