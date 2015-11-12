@@ -1,11 +1,25 @@
 {
-	"name" 			: "AppMEANSimple",
-	"version" 		: "0.0.1",
-	"description"	: "App sencilla con MongoDB, Express, AngularJS y NodeJS",
-	"main"			: "server.js",
-	"author"		: "Adrián Feria",
-	"dependencies"	: {
-		"express"	: "~3.4.4",
-		"mongoose"	: "~3.6.2"
-	} 
+  "name": "y",
+  "version": "0.0.1",
+  "description": "App sencilla con MongoDB, Express, AngularJS y NodeJS",
+  "main": "server.js",
+  "author": "Adrián Feria",
+  "dependencies": {
+    "express": "~3.4.4",
+    "mongoose": "~3.6.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aferia28/AppMEAN-Simple.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aferia28/AppMEAN-Simple/issues"
+  },
+  "homepage": "https://github.com/aferia28/AppMEAN-Simple#readme"
 }
