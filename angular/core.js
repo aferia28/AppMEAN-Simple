@@ -1,4 +1,4 @@
-angular.module('MainApp', [])
+var app = angular.module('MainApp', [])
 
 function mainController($scope, $http){
 
@@ -59,6 +59,7 @@ function mainController($scope, $http){
 
 	$scope.selectPersona = function(persona){
 
+		console.log(persona);
 		$scope.newPersona = persona;
 		$scope.selected = true;
 		console.log($scope.newPersona, $scope.selected);
